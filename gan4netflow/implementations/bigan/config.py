@@ -1,0 +1,28 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--dataset', default='mnist', help='netflow|mnist')
+parser.add_argument("--n_epochs", type=int, default=200, help="number of epochs of training")
+parser.add_argument("--batch_size", type=int, default=128, help="size of the batches")
+parser.add_argument("--lr", type=float, default=0.0002, help="adam: learning rate")
+parser.add_argument("--b1", type=float, default=0.5, help="adam: decay of first order momentum of gradient")
+parser.add_argument("--b2", type=float, default=0.999, help="adam: decay of first order momentum of gradient")
+parser.add_argument("--n_cpu", type=int, default=8, help="number of cpu threads to use during batch generation")
+parser.add_argument("--latent_dim", type=int, default=50, help="dimensionality of the latent space")
+parser.add_argument("--latent_dim4flow", type=int, default=7, help="18dimensionality of the latent space")
+parser.add_argument("--img_size", type=int, default=28, help="size of each image dimension")
+parser.add_argument("--channels", type=int, default=1, help="number of image channels")
+parser.add_argument("--sample_interval", type=int, default=400, help="interval betwen image samples")
+parser.add_argument('--save_model4mnist_dir', default=r'D:\code\gan4netflow\implementations\bigan\modelsave\model4training\model4mnist')
+parser.add_argument('--save_model4netflow_dir', default=r'D:\code\gan4netflow\implementations\bigan\modelsave\model4training\model4netflow')
+parser.add_argument('--model4mnist_path', default='D:\code\gan4netflow\implementations\wgan_gp\modelsave4wgan_gp\discriminator_epoch_180.pth')
+parser.add_argument('--model4netflow_D_path', default=r'D:\code\gan4netflow\implementations\wgan_gp\模型保存\netflow\1005_model4netflow\221005discriminator_epoch_180.pth')
+parser.add_argument('--model4netflow_G_path', default=r'D:\code\gan4netflow\implementations\wgan_gp\模型保存\netflow\1005_model4netflow\221005generator_epoch_180.pth')
+parser.add_argument('--model4netflow_E_path', default=r'D:\code\gan4netflow\implementations\wgan_gp\模型保存\netflow\1005_model4netflow\221005generator_epoch_180.pth')
+parser.add_argument('--traindata_path', default=r'D:\code\gan4netflow\data\flowdataset_h5\220929_flowdata_train.hdf5')
+parser.add_argument('--testdata_path', default=r'D:\code\gan4netflow\data\flowdataset_h5\220929_flowdata_test.hdf5')
+
+opt = parser.parse_args()
+print(opt)
+
+img_shape = (opt.channels, opt.img_size, opt.img_size)

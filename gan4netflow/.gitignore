@@ -1,0 +1,23 @@
+
+*.json
+*.h5
+*.pt
+*.hdf5
+*.pth
+*.gif
+*.jpg
+*.png
+*.log
+.DS_Store
+
+# 忽略任何目录下名为 build 的文件夹
+cifar10/
+mnist/
+CIFARdata/
+data/*/
+zeeklog/
+implementations/*/data
+#implementations/*/images
+implementations/*/saved_models
+
+__pycache__

@@ -59,6 +59,10 @@
 
 ## 安装
 
+### 下载
+
+下载项目到本地
+
 ### 环境配置
 
 根据requirements配置对应的环境
@@ -66,15 +70,6 @@
 ```python
 pip install -r requirements.txt
 ```
-
-### 下载
-
-下载项目到本地
-
-```bash
-git clone https://gitee.com/tjpusky/UEBA_GAN.git
-```
-
 ### 运行测试用例
 
 为了保险起见，请先使用测试用例测试各部分功能是否正常工作
